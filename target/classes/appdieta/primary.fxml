@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="950.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appdieta.PrimaryController">
+    <children>
+        <Pane fx:id="titlePane" layoutX="-10.0" layoutY="-3.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="1084.0" styleClass="mainPane" stylesheets="@style.css">
+            <children>
+                <Label layoutX="39.0" layoutY="10.0" stylesheets="@style.css" text="MYDIETA" textFill="WHITE" />
+                <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="23.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/Mi%20proyecto.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="btnClose" fitHeight="16.0" fitWidth="16.0" layoutX="999.0" layoutY="9.0" onMouseClicked="#onCerrarClicked" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/close.png" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="btnMinimize" fitHeight="16.0" fitWidth="16.0" layoutX="972.0" layoutY="9.0" onMouseClicked="#onMinimizeClicked" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/hide.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Label alignment="TOP_CENTER" layoutX="34.0" layoutY="89.0" prefHeight="45.0" prefWidth="464.0" styleClass="label-title" stylesheets="@style.css" text="Ingrese su información personal:" textAlignment="CENTER" />
+        <GridPane hgap="10.0" layoutX="34.0" layoutY="239.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="244.0" prefWidth="379.0" stylesheets="@style.css" vgap="5.0">
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+            <children>
+                <Label styleClass="label-input" stylesheets="@style.css" text="Nombre:" GridPane.columnIndex="0" />
+                <TextField fx:id="txtNombre" styleClass="text-field" stylesheets="@style.css" GridPane.columnIndex="1" />
+                <Label styleClass="label-input" stylesheets="@style.css" text="Sexo:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <HBox spacing="10.0" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <children>
+                        <RadioButton fx:id="btnHombre" onAction="#onHombreClicked" styleClass="button-gender" stylesheets="@style.css" text="Hombre" />
+                        <RadioButton fx:id="btnMujer" onAction="#onMujerClicked" styleClass="button-gender" stylesheets="@style.css" text="Mujer" />
+                    </children>
+                </HBox>
+                <Label styleClass="label-input" stylesheets="@style.css" text="Edad:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="txtEdad" styleClass="text-field" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label styleClass="label-input" stylesheets="@style.css" text="Peso (kg):" GridPane.rowIndex="3" />
+                <TextField fx:id="txtPeso" styleClass="text-field" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label styleClass="label-input" stylesheets="@style.css" text="Altura (cm):" GridPane.rowIndex="4" />
+                <TextField fx:id="txtAltura" styleClass="text-field" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+        <ImageView fitHeight="319.0" fitWidth="297.0" layoutX="619.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/Mi%20proyecto.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="btnEnviar" layoutX="783.0" layoutY="554.0" onAction="#switchToVolumenDefinicion" styleClass="btn-seleccion" stylesheets="@style.css" text="Siguiente" />
+    </children>
+</AnchorPane>

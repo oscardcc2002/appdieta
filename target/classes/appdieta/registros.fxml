@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="955.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appdieta.registros">
+   <children>
+      <Pane fx:id="titlePane" layoutX="-9.0" layoutY="-3.0" prefHeight="35.0" prefWidth="1077.0" styleClass="mainPane" stylesheets="@style.css">
+         <children>
+            <Label layoutX="46.0" layoutY="10.0" stylesheets="@style.css" text="MYDIETA" textFill="WHITE" />
+            <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="21.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Mi%20proyecto.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnMinimize" fitHeight="16.0" fitWidth="16.0" layoutX="976.0" layoutY="10.0" onMouseClicked="#onMinimizeClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/hide.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnClose" fitHeight="16.0" fitWidth="16.0" layoutX="1006.0" layoutY="11.0" onMouseClicked="#onCerrarClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/close.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="btnComidas" layoutX="700.0" layoutY="557.0" mnemonicParsing="false" onAction="#switchToComidas" styleClass="btn-seleccion" stylesheets="@style.css" text="COMIDAS" />
+      <Button fx:id="btnUsuario" layoutX="549.0" layoutY="557.0" mnemonicParsing="false" onAction="#switchToUsuario" prefHeight="43.0" prefWidth="143.0" styleClass="btn-seleccion" stylesheets="@style.css" text="USUARIO" />
+      <Button fx:id="btnPlanDeDieta" layoutX="359.0" layoutY="557.0" mnemonicParsing="false" onAction="#switchToPlanDeDieta" prefHeight="50.0" prefWidth="181.0" styleClass="btn-seleccion" stylesheets="@style.css" text="PLAN DE DIETA" />
+      <TableView fx:id="tablaRegistros" layoutX="375.0" layoutY="32.0" prefHeight="516.0" prefWidth="528.0" styleClass="table-row-cell" stylesheets="@style.css">
+         <columns>
+            <TableColumn fx:id="fechayhoraTabla" prefWidth="181.0" text="Fecha y hora" />
+            <TableColumn fx:id="nombreComidaTabla" prefWidth="86.0" text="Nombre" />
+            <TableColumn fx:id="nombreAlimentoTabla" prefWidth="148.0" text="Alimento" />
+            <TableColumn fx:id="cantidadAlimentoTabla" prefWidth="113.0" text="Cantidad" />
+         </columns>
+      </TableView>
+      <Label layoutX="135.0" layoutY="54.0" styleClass="label-title" stylesheets="@style.css" text="Registros" />
+      <Label layoutX="8.0" layoutY="140.0" styleClass="highlight" stylesheets="@style.css" text="Fecha y hora" />
+      <Label layoutX="18.0" layoutY="209.0" styleClass="highlight" stylesheets="@style.css" text="Nombre" />
+      <Label layoutX="15.0" layoutY="279.0" styleClass="highlight" stylesheets="@style.css" text="Alimento" />
+      <Label layoutX="16.0" layoutY="342.0" styleClass="highlight" stylesheets="@style.css" text="Cantidad" />
+      <TextField fx:id="txtFechayHora" layoutX="110.0" layoutY="124.0" prefHeight="49.0" prefWidth="224.0" promptText="AAAA/MM/DD HH:mm:ss" stylesheets="@style.css">
+         <font>
+            <Font name="Arial" size="10.0" />
+         </font></TextField>
+      <TextField fx:id="txtNombreComida" layoutX="110.0" layoutY="193.0" stylesheets="@style.css" />
+      <TextField fx:id="txtNombreAlimento" layoutX="110.0" layoutY="263.0" stylesheets="@style.css" />
+      <TextField fx:id="txtCantidad" layoutX="110.0" layoutY="326.0" promptText="Gramos" stylesheets="@style.css" />
+      <Button fx:id="insertar" layoutX="239.0" layoutY="405.0" mnemonicParsing="false" onAction="#insertar" text="Insertar" />
+      <Button fx:id="btnborrar" layoutX="135.0" layoutY="405.0" mnemonicParsing="false" onAction="#borrar" text="Borrar" />
+   </children>
+</AnchorPane>

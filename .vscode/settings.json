@@ -1,0 +1,11 @@
+{
+    "maven.excludedFolders": [
+        
+        "**/.*",
+        "**/node_modules",
+        "**/target",
+        "**/bin",
+        "**/archetype-resources"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
+}

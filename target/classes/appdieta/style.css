@@ -1,0 +1,125 @@
+@keyframes changeColor {
+    0% {
+        background-color: #e0bdb7;
+    }
+    50% {
+        background-color: #f8561b;
+    }
+    100% {
+        background-color: #a71e06;
+    }
+}
+
+#background {
+    -fx-background-color: #FFC0CB;
+}
+
+.label-title {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FF6347;
+}
+
+.vbox {
+    -fx-background-color: #FFFACD;
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+    -fx-alignment: center;
+}
+
+.label-input {
+    -fx-font-size: 18px;
+    -fx-text-fill: #333333;
+}
+
+.text-field {
+    -fx-font-size: 18px;
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 5px;
+    -fx-border-color: #FFC0CB;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px;
+}
+
+.button-submit {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #FF6347;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-padding: 12px 24px;
+}
+
+.root {
+    -fx-background-color: #f1bbae;
+    -fx-background-radius: 28;
+}
+
+.mainPane {
+    -fx-background-color: linear-gradient(to bottom right, #FF7F50, #6A5ACD);
+    -fx-background-radius: 15 15 25 25;
+}
+
+.highlight {
+    -fx-background-color: #00000025;
+    -fx-background-radius: 15;
+}
+
+.btn-seleccion {
+    -fx-font-size: 20px;
+    -fx-background-color: #FF6347;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    animation: changeColor 2s infinite;
+}
+
+.btn-seleccion:hover {
+    -fx-background-color: #FF7F50;
+}
+
+.menuItem:hover {
+    -fx-border-color: #660099;
+    -fx-border-width: 0px 0px 3px 0px;
+}
+
+.sidebarItem:hover {
+    -fx-background-color: #146886;
+    -fx-border-color: WHITE;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+
+.table-view {
+    -fx-background-color: #FFFFFF; /* Color de fondo */
+}
+
+.table-view .column-header {
+    -fx-background-color: #FF6666; /* Color de fondo del encabezado de columna */
+    -fx-text-fill: white; /* Color del texto del encabezado de columna */
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: #FFEEEE; /* Color de fondo de las filas */
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: #FFDDDD; /* Color de fondo de las filas pares */
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #FF3333; /* Color de fondo de la fila seleccionada */
+    -fx-text-fill: white; /* Color del texto de la fila seleccionada */
+}
+
+.table-view .table-cell {
+    -fx-padding: 0.5em 1em; /* Espaciado interno de las celdas */
+}
+
+.button-color-transition {
+    -fx-background-color: #e0bdb7;
+    -fx-background-radius: 5px;
+    -fx-padding: 12px 24px;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}

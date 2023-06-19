@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="996.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appdieta.usuario">
+    <children>
+        <Label layoutX="328.0" layoutY="56.0" styleClass="label-title" stylesheets="@style.css" text="Información del Usuario" />
+        <Label layoutX="95.0" layoutY="195.0" prefHeight="17.0" prefWidth="49.0" styleClass="highlight" stylesheets="@style.css" text="Nombre:" />
+        <Label layoutX="95.0" layoutY="240.0" prefHeight="17.0" prefWidth="35.0" styleClass="highlight" stylesheets="@style.css" text="Peso:" />
+        <Label layoutX="95.0" layoutY="285.0" prefHeight="17.0" prefWidth="35.0" styleClass="highlight" stylesheets="@style.css" text="Edad:" />
+        <Label layoutX="92.0" layoutY="330.0" prefHeight="17.0" prefWidth="41.0" styleClass="highlight" stylesheets="@style.css" text="Altura:" />
+      <Pane fx:id="titlePane" layoutY="-3.0" prefHeight="35.0" prefWidth="1064.0" styleClass="mainPane" stylesheets="@style.css">
+         <children>
+            <Label layoutX="46.0" layoutY="10.0" stylesheets="@style.css" text="MYDIETA" textFill="WHITE" />
+            <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="21.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Mi%20proyecto.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnClose" fitHeight="16.0" fitWidth="16.0" layoutX="991.0" layoutY="10.0" onMouseClicked="#onCerrarClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/close.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnMinimize" fitHeight="16.0" fitWidth="16.0" layoutX="963.0" layoutY="10.0" onMouseClicked="#onMinimizeClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/hide.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="btnComidas" layoutX="853.0" layoutY="523.0" mnemonicParsing="false" onAction="#switchToComidas" styleClass="btn-seleccion" stylesheets="@style.css" text="COMIDAS" />
+      <Button fx:id="btnRegistros" layoutX="701.0" layoutY="523.0" mnemonicParsing="false" onAction="#switchToRegistros" prefHeight="43.0" prefWidth="143.0" styleClass="btn-seleccion" stylesheets="@style.css" text="REGISTROS" />
+      <Button fx:id="btnPlanDeDieta" layoutX="511.0" layoutY="523.0" mnemonicParsing="false" onAction="#switchToPlanDeDieta" prefHeight="50.0" prefWidth="181.0" styleClass="btn-seleccion" stylesheets="@style.css" text="PLAN DE DIETA" />
+      <Button fx:id="btnEdtar" layoutX="130.0" layoutY="490.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="btnGuardarCambios" layoutX="226.0" layoutY="490.0" mnemonicParsing="false" onAction="#guardarCambios" text="Guardar Cambios" />
+      <TextField fx:id="txtNombre_usuario" editable="false" layoutX="171.0" layoutY="186.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="199.0" stylesheets="@style.css" />
+      <TextField fx:id="txtPeso" editable="false" layoutX="172.0" layoutY="231.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="199.0" stylesheets="@style.css" />
+      <TextField fx:id="txtEdad" editable="false" layoutX="172.0" layoutY="276.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="199.0" stylesheets="@style.css" />
+      <TextField fx:id="txtAltura" editable="false" layoutX="171.0" layoutY="321.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="199.0" stylesheets="@style.css" />
+      <ImageView fitHeight="245.0" fitWidth="341.0" layoutX="631.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/usuario.png" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="btnDefinicion" layoutX="180.0" layoutY="382.0" onAction="#onDefinicionClicked" styleClass="button-gender" stylesheets="@style.css" text="Definición" />
+      <RadioButton fx:id="btnVolumen" layoutX="283.0" layoutY="382.0" onAction="#onVolumenClicked" styleClass="button-gender" stylesheets="@style.css" text="Volumen" />
+      <Label layoutX="82.0" layoutY="382.0" prefHeight="17.0" prefWidth="75.0" styleClass="highlight" stylesheets="@style.css" text="Tipo de dieta:" />
+      <Label layoutX="74.0" layoutY="429.0" prefHeight="17.0" prefWidth="92.0" styleClass="highlight" stylesheets="@style.css" text="Actividad Física:" />
+      <RadioButton fx:id="btnNadaActivo" layoutX="172.0" layoutY="429.0" onAction="#onNadaActivoClicked" prefHeight="17.0" prefWidth="92.0" styleClass="button-gender" stylesheets="@style.css" text="Nada Activo" />
+      <RadioButton fx:id="btnRelativamenteActivo" layoutX="271.0" layoutY="429.0" onAction="#onRelativamenteActivoClicked" styleClass="button-gender" stylesheets="@style.css" text="Relativamente Activo" />
+      <RadioButton fx:id="btnActivo" layoutX="413.0" layoutY="429.0" onAction="#onActivoClicked" styleClass="button-gender" stylesheets="@style.css" text="Activo" />
+      <RadioButton fx:id="btnEjercicioADiario" layoutX="475.0" layoutY="429.0" onAction="#onEjercicioADiarioClicked" styleClass="button-gender" stylesheets="@style.css" text="Ejercicio a Diario" />
+    </children>
+</AnchorPane>

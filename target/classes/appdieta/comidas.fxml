@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="918.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appdieta.comidas">
+   <children>
+      <Pane fx:id="titlePane" layoutX="-12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="1085.0" styleClass="mainPane" stylesheets="@style.css">
+         <children>
+            <Label layoutX="46.0" layoutY="10.0" stylesheets="@style.css" text="MYDIETA" textFill="WHITE" />
+            <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="21.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Mi%20proyecto.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnMinimize" fitHeight="16.0" fitWidth="16.0" layoutX="980.0" layoutY="10.0" onMouseClicked="#onMinimizeClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/hide.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btnClose" fitHeight="16.0" fitWidth="16.0" layoutX="1014.0" layoutY="10.0" onMouseClicked="#onCerrarClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/close.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="btnUsuario" layoutX="788.0" layoutY="515.0" mnemonicParsing="false" onAction="#switchToUsuario" styleClass="btn-seleccion" stylesheets="@style.css" text="USUARIO" />
+      <Button fx:id="btnRegistros" layoutX="637.0" layoutY="515.0" mnemonicParsing="false" onAction="#switchToRegistros" prefHeight="43.0" prefWidth="143.0" styleClass="btn-seleccion" stylesheets="@style.css" text="REGISTROS" />
+      <Button fx:id="btnPlanDeDieta" layoutX="447.0" layoutY="515.0" mnemonicParsing="false" onAction="#switchToPlanDeDieta" prefHeight="50.0" prefWidth="181.0" styleClass="btn-seleccion" stylesheets="@style.css" text="PLAN DE DIETA" />
+      <ImageView fx:id="imagenComida" fitHeight="285.0" fitWidth="355.0" layoutX="502.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/Salmon.png" />
+         </image></ImageView>
+      <Label fx:id="lblComidaHora" alignment="CENTER" contentDisplay="CENTER" layoutX="303.0" layoutY="69.0" prefHeight="35.0" prefWidth="371.0" styleClass="label-title" stylesheets="@style.css" />
+      <Label layoutX="42.0" layoutY="220.0" style="-fx-font-size: 18px;" styleClass="highlight" stylesheets="@style.css" text="Carbohidratos (g):" />
+      <Label fx:id="lblCarbohidratos" layoutX="258.0" layoutY="220.0" prefHeight="27.0" prefWidth="149.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" stylesheets="@style.css" />
+      <Label layoutX="42.0" layoutY="270.0" style="-fx-font-size: 18px;" styleClass="highlight" stylesheets="@style.css" text="Proteínas (g):" />
+      <Label fx:id="lblProteinas" layoutX="184.0" layoutY="270.0" prefHeight="27.0" prefWidth="149.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" stylesheets="@style.css" />
+      <Label layoutX="42.0" layoutY="320.0" style="-fx-font-size: 18px;" styleClass="highlight" stylesheets="@style.css" text="Grasas (g):" />
+      <Label fx:id="lblGrasas" layoutX="166.0" layoutY="320.0" prefHeight="27.0" prefWidth="149.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" stylesheets="@style.css" />
+      <Label layoutX="42.0" layoutY="370.0" style="-fx-font-size: 18px;" styleClass="highlight" stylesheets="@style.css" text="Calorías" />
+      <Label fx:id="lblCalorias" layoutX="147.0" layoutY="370.0" prefHeight="27.0" prefWidth="149.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" stylesheets="@style.css" />
+      <Label layoutX="45.0" layoutY="177.0" style="-fx-font-size: 18px;" styleClass="highlight" stylesheets="@style.css" text="Nombre:" />
+      <Label fx:id="lblNombreAlimento" layoutX="135.0" layoutY="177.0" prefHeight="27.0" prefWidth="149.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" styleClass="label-input" stylesheets="@style.css" />
+      <Label layoutX="47.0" layoutY="134.0" style="-fx-font-size: 18px;" styleClass="highlight" stylesheets="@style.css" text="Tipo:" />
+      <Label fx:id="lblTipo" layoutX="110.0" layoutY="134.0" prefHeight="27.0" prefWidth="149.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" styleClass="label-input" stylesheets="@style.css" />
+      <Button fx:id="botonInicio" layoutX="129.0" layoutY="470.0" mnemonicParsing="false" onAction="#botonInicio" text="Ini" />
+      <Button fx:id="botonAnterior" layoutX="182.0" layoutY="470.0" mnemonicParsing="false" onAction="#botonAnterior" text="&lt;" />
+      <Button fx:id="botonFin" layoutX="303.0" layoutY="470.0" mnemonicParsing="false" onAction="#botonFin" text="Fin" />
+      <Button fx:id="botonSiguiente" layoutX="239.0" layoutY="470.0" mnemonicParsing="false" onAction="#botonSiguiente" text="&gt;" />
+      <Label layoutX="35.0" layoutY="60.0" text="(por cada 100g)" />
+   </children>
+</AnchorPane>
